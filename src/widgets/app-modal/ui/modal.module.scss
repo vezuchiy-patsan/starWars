@@ -1,0 +1,176 @@
+.Modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #2121217c;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.ModalContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	position: relative;
+	width: 800px;
+	height: 420px;
+	@media (max-width: 820px) {
+		width: 100%;
+		height: 75%;
+	}
+}
+
+.buttonClose {
+	cursor: pointer;
+	right: 0;
+	width: 30px;
+	height: 30px;
+}
+
+.ModalMainSection {
+	border-radius: var(--border-M);
+	margin-top: 18px;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background: #1f2a63;
+	@media (max-width: 820px) {
+		flex-direction: column;
+	}
+}
+.MainSectionImage {
+	display: flex;
+	position: relative;
+	width: 45%;
+	@media (max-width: 820px) {
+		width: 100%;
+		height: 40%;
+	}
+}
+.MainSectionImageProfile {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	align-self: center;
+	margin-left: auto;
+	margin-right: auto;
+	right: 0;
+	left: 0;
+	@media (max-width: 820px) {
+		width: 100px;
+		height: 100px;
+	}
+}
+.picksCharacter {
+	width: fit-content;
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	bottom: 16px;
+	right: 16px;
+	gap: 10px;
+	.pick {
+		width: max-content;
+		padding: 2px 8px;
+		box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.18) inset;
+		border-radius: 11px;
+		background-color: rgba(7, 214, 242, 1);
+	}
+	.male {
+		background-color: rgba(115, 214, 119, 1);
+	}
+	.female {
+		background-color: rgba(201, 86, 255, 1);
+	}
+	.hermaphrodite {
+		background-color: rgba(245, 219, 19, 1);
+	}
+}
+.MainSectionDescription {
+	width: 55%;
+	padding-left: 16px;
+	background: linear-gradient(180deg, #17002f 42.19%, #1f2a63 100%);
+	border-top-right-radius: var(--border-M);
+	border-bottom-right-radius: var(--border-M);
+	h2 {
+		padding-top: 32px;
+		margin-bottom: 16px;
+		color: #fdfdfd;
+		font-size: 36px;
+		font-weight: 700;
+	}
+	@media (max-width: 820px) {
+		width: 100%;
+		h2 {
+			font-size: 24px;
+			padding-top: 16px;
+		}
+	}
+}
+.MainSectionDescriptionText {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #fdfdfd;
+	width: 264px;
+	min-height: 104px;
+	border-radius: 0.5rem;
+	> p {
+		padding-left: 16px;
+		color: black;
+		font-weight: 400;
+		font-size: 16px;
+	}
+	@media (max-width: 820px) {
+		width: 80%;
+	}
+}
+.MainSectionDescriptionStats {
+	width: 188px;
+	height: 80px;
+	position: absolute;
+	bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 820px) {
+		width: 80%;
+	}
+}
+
+.characterCardProperty {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 10px;
+	padding-block: 12px;
+	> div {
+		display: flex;
+		padding-top: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 82px;
+		height: 80px;
+		border-radius: 8px;
+		background-color: #fdfdfd;
+	}
+	.circle {
+		margin: 0 auto;
+		width: 37.5px;
+		height: 37.5px;
+		border: 3px solid #212121;
+		border-radius: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	p {
+		text-align: center;
+	}
+}
